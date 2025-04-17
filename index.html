@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هنر ایرانی | بازار آنلاین آثار طراحان ایرانی</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #fafafa;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-item:hover .category-icon {
+            transform: scale(1.1);
+        }
+        
+        .rtl {
+            direction: rtl;
+        }
+        
+        .persian-number {
+            font-feature-settings: "numr";
+        }
+    </style>
+</head>
+<body class="rtl">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <a href="#" class="text-2xl font-bold flex items-center">
+                        <i class="fas fa-palette ml-2"></i>
+                        <span>هنر ایرانی</span>
+                    </a>
+                    <nav class="hidden md:flex space-x-6 space-x-reverse">
+                        <a href="#" class="hover:text-yellow-200 transition">صفحه اصلی</a>
+                        <a href="#" class="hover:text-yellow-200 transition">طراحان</a>
+                        <a href="#" class="hover:text-yellow-200 transition">دسته‌بندی‌ها</a>
+                        <a href="#" class="hover:text-yellow-200 transition">درباره ما</a>
+                        <a href="#" class="hover:text-yellow-200 transition">تماس با ما</a>
+                    </nav>
+                </div>
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <button class="p-2 rounded-full hover:bg-white/10 transition">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="p-2 rounded-full hover:bg-white/10 transition">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="absolute -mt-8 ml-3 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">۳</span>
+                    </button>
+                    <a href="#" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-4 py-2 rounded-full font-medium transition">ورود / ثبت‌نام</a>
+                    <button class="md:hidden p-2 rounded-full hover:bg-white/10 transition">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">بازار آنلاین آثار طراحان ایرانی</h1>
+                <p class="text-xl mb-8 opacity-90">اثر هنری خود را به دنیا معرفی کنید یا از میان هزاران اثر منحصر به فرد ایرانی انتخاب کنید.</p>
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 sm:space-x-reverse">
+                    <a href="#" class="bg-white text-gray-900 hover:bg-gray-100 px-6 py-3 rounded-full font-bold text-center transition">فروشگاه آثار</a>
+                    <a href="#" class="bg-transparent border-2 border-white hover:bg-white/10 px-6 py-3 rounded-full font-bold text-center transition">ثبت اثر جدید</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-full max-w-md">
+                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+                    <div class="absolute -bottom-8 -left-6 w-32 h-32 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Iranian Art" class="relative rounded-2xl shadow-2xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">دسته‌بندی آثار</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <a href="#" class="category-item bg-gray-50 hover:bg-gray-100 rounded-xl p-6 text-center transition">
+                    <div class="category-icon bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition">
+                        <i class="fas fa-paint-brush text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">نقاشی</h3>
+                </a>
+                <a href="#" class="category-item bg-gray-50 hover:bg-gray-100 rounded-xl p-6 text-center transition">
+                    <div class="category-icon bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition">
+                        <i class="fas fa-tshirt text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">طراحی لباس</h3>
+                </a>
+                <a href="#" class="category-item bg-gray-50 hover:bg-gray-100 rounded-xl p-6 text-center transition">
+                    <div class="category-icon bg-yellow-100 text-yellow-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition">
+                        <i class="fas fa-gem text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">جواهرات</h3>
+                </a>
+                <a href="#" class="category-item bg-gray-50 hover:bg-gray-100 rounded-xl p-6 text-center transition">
+                    <div class="category-icon bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition">
+                        <i class="fas fa-home text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">دکوراسیون</h3>
+                </a>
+                <a href="#" class="category-item bg-gray-50 hover:bg-gray-100 rounded-xl p-6 text-center transition">
+                    <div class="category-icon bg-red-100 text-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition">
+                        <i class="fas fa-camera text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">عکاسی</h3>
+                </a>
+                <a href="#" class="category-item bg-gray-50 hover:bg-gray-100 rounded-xl p-6 text-center transition">
+                    <div class="category-icon bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition">
+                        <i class="fas fa-mobile-alt text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">طراحی دیجیتال</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="text-3xl font-bold">آثار منتخب</h2>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                    مشاهده همه
+                    <i class="fas fa-arrow-left mr-2"></i>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1579547945413-497e1b99dac0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Product" class="w-full h-64 object-cover">
+                        <div class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">جدید</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg">نقاشی مدرن ایرانی</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">نقاشی</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">اثر: مریم احمدی</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-gray-600 text-sm mr-1">(۱۲)</span>
+                            </div>
+                            <div class="text-left">
+                                <span class="text-gray-500 line-through text-sm">۲,۵۰۰,۰۰۰</span>
+                                <span class="font-bold text-lg persian-number">۱,۹۹۰,۰۰۰ <span class="text-sm">تومان</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1583744949094-8f677a4a7bd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Product" class="w-full h-64 object-cover">
+                        <div class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">پرفروش</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg">دستبند میناکاری</h3>
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">جواهرات</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">اثر: علی رضایی</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-gray-600 text-sm mr-1">(۲۳)</span>
+                            </div>
+                            <div class="text-left">
+                                <span class="font-bold text-lg persian-number">۸۵۰,۰۰۰ <span class="text-sm">تومان</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Product" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg">طرح دیجیتال ایرانی</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">دیجیتال</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">اثر: سارا محمدی</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-gray-600 text-sm mr-1">(۴۵)</span>
+                            </div>
+                            <div class="text-left">
+                                <span class="font-bold text-lg persian-number">۴۹۰,۰۰۰ <span class="text-sm">تومان</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Product" class="w-full h-64 object-cover">
+                        <div class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">تخفیف</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg">لباس محلی قشقایی</h3>
+                            <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded">لباس</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">اثر: نازنین کریمی</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-gray-600 text-sm mr-1">(۱۸)</span>
+                            </div>
+                            <div class="text-left">
+                                <span class="text-gray-500 line-through text-sm">۱,۲۰۰,۰۰۰</span>
+                                <span class="font-bold text-lg persian-number">۹۹۰,۰۰۰ <span class="text-sm">تومان</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Artists -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="text-3xl font-bold">طراحان برتر</h2>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                    مشاهده همه
+                    <i class="fas fa-arrow-left mr-2"></i>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Artist 1 -->
+                <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-md transition">
+                    <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-white shadow-md">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Artist" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">مریم احمدی</h3>
+                    <p class="text-gray-600 mb-3">نقاش و طراح</p>
+                    <div class="flex justify-center space-x-2 space-x-reverse">
+                        <a href="#" class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-gray-200 transition">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Artist 2 -->
+                <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-md transition">
+                    <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-white shadow-md">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Artist" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">علی رضایی</h3>
+                    <p class="text-gray-600 mb-3">طراح جواهرات</p>
+                    <div class="flex justify-center space-x-2 space-x-reverse">
+                        <a href="#" class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-gray-200 transition">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Artist 3 -->
+                <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-md transition">
+                    <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-white shadow-md">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Artist" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">سارا محمدی</h3>
+                    <p class="text-gray-600 mb-3">طراح دیجیتال</p>
+                    <div class="flex justify-center space-x-2 space-x-reverse">
+                        <a href="#" class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-gray-200 transition">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Artist 4 -->
+                <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-md transition">
+                    <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-white shadow-md">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Artist" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">نازنین کریمی</h3>
+                    <p class="text-gray-600 mb-3">طراح لباس</p>
+                    <div class="flex justify-center space-x-2 space-x-reverse">
+                        <a href="#" class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-gray-200 transition">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">چگونه آثار خود را بفروشیم؟</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-plus text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">حساب کاربری بسازید</h3>
+                    <p class="text-gray-600">ثبت نام رایگان است و فقط چند دقیقه طول می‌کشد. اطلاعات خود را تکمیل کنید تا به عنوان طراح تأیید شوید.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                    <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-upload text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">آثار خود را آپلود کنید</h3>
+                    <p class="text-gray-600">عکس‌های باکیفیت از آثار خود همراه با توضیحات کامل و قیمت گذاری مناسب آپلود کنید.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-money-bill-wave text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">فروش و درآمدزایی</h3>
+                    <p class="text-gray-600">پس از فروش اثر، مبلغ حاصل پس از کسر کارمزد به حساب شما واریز خواهد شد.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">نظرات هنرمندان</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="User" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">مینا حسینی</h4>
+                            <p class="text-gray-600 text-sm">طراح دکوراسیون</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"هنر ایرانی به من کمک کرد تا آثارم را به مخاطبان بیشتری معرفی کنم. در کمتر از ۳ ماه توانستم اولین فروش بین‌المللی خود را تجربه کنم. سیستم پرداخت و پشتیبانی عالی دارند."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="User" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">امیرحسین مرادی</h4>
+                            <p class="text-gray-600 text-sm">عکاس و گرافیست</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"به عنوان یک هنرمند جوان، پیدا کردن بازار برای آثارم همیشه چالش بزرگی بود. هنر ایرانی این مشکل را برای من حل کرد. حالا می‌توانم روی خلق آثار جدید تمرکز کنم و نگران فروش نباشم."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">آماده فروش آثار خود هستید؟</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">همین امروز به جامعه طراحان ایرانی بپیوندید و آثار خود را به هزاران مخاطب علاقه‌مند معرفی کنید.</p>
+            <a href="#" class="inline-block bg-white text-gray-900 hover:bg-gray-100 px-8 py-3 rounded-full font-bold text-lg transition">ثبت نام رایگان</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-palette ml-2"></i>
+                        هنر ایرانی
+                    </h3>
+                    <p class="mb-4">بازار آنلاین آثار طراحان و هنرمندان ایرانی. ما بستری امن و حرفه‌ای برای معرفی و فروش آثار هنری شما فراهم کرده‌ایم.</p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">لینک‌های مفید</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">صفحه اصلی</a></li>
+                        <li><a href="#" class="hover:text-white transition">درباره ما</a></li>
+                        <li><a href="#" class="hover:text-white transition">حریم خصوصی</a></li>
+                        <li><a href="#" class="hover:text-white transition">قوانین و مقررات</a></li>
+                        <li><a href="#" class="hover:text-white transition">سوالات متداول</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">خدمات</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">ثبت اثر جدید</a></li>
+                        <li><a href="#" class="hover:text-white transition">پنل فروشندگان</a></li>
+                        <li><a href="#" class="hover:text-white transition">گزارشات مالی</a></li>
+                        <li><a href="#" class="hover:text-white transition">پشتیبانی فروشندگان</a></li>
+                        <li><a href="#" class="hover:text-white transition">برنامه همکاری در فروش</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">تماس با ما</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt ml-2 text-gray-400"></i>
+                            تهران، خیابان ولیعصر، پلاک ۱۲۳۴
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone ml-2 text-gray-400"></i>
+                            <span class="persian-number">۰۲۱-۱۲۳۴۵۶۷۸</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope ml-2 text-gray-400"></i>
+                            info@honareirani.ir
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-800 text-center">
+                <p>© <span class="persian-number">۱۴۰۲</span> - تمام حقوق برای هنر ایرانی محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.md\\:hidden');
+            const mobileMenu = document.querySelector('nav');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+                mobileMenu.classList.toggle('flex-col');
+                mobileMenu.classList.toggle('absolute');
+                mobileMenu.classList.toggle('top-16');
+                mobileMenu.classList.toggle('left-0');
+                mobileMenu.classList.toggle('right-0');
+                mobileMenu.classList.toggle('bg-gradient-to-b');
+                mobileMenu.classList.toggle('from-blue-900');
+                mobileMenu.classList.toggle('to-blue-700');
+                mobileMenu.classList.toggle('p-4');
+                mobileMenu.classList.toggle('space-y-4');
+                mobileMenu.classList.toggle('space-x-0');
+            });
+            
+            // Persian number formatting for prices
+            const persianNumbers = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+            function toPersianNumber(input) {
+                return input.toString().replace(/\d/g, d => persianNumbers[d]);
+            }
+            
+            document.querySelectorAll('.persian-number').forEach(el => {
+                el.innerHTML = toPersianNumber(el.textContent);
+            });
+        });
+    </script>
+</body>
+</html>
